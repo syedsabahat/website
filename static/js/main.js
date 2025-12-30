@@ -1,0 +1,1 @@
+console.log('Islamic Research Website');

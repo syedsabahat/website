@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Islamic Research Library</title>
+
+    <link rel="stylesheet" href="/static/css/style.css">
+
+    <style>
+        body {
+            font-family: "Segoe UI", Arial, sans-serif;
+            margin: 0;
+            background: #f5f7fa;
+            color: #333;
+        }
+
+        header {
+            background: linear-gradient(135deg, #0b5ed7, #0a3d62);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        nav {
+            background: white;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 15px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #0b5ed7;
+            font-weight: 600;
+            padding: 8px 14px;
+            border-radius: 6px;
+        }
+
+        nav a:hover {
+            background: #0b5ed7;
+            color: white;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+            text-align: center;
+        }
+
+        footer {
+            margin-top: 60px;
+            background: #0a3d62;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>📚 ABU MUAVIYAHHH</h1>
+    <p>DISMANTLING BATIL AND REFUTING ALLEGATIONS ON SAHABA</p>
+</header>
+
+<nav>
+    <a href="/user">Home</a>
+    <a href="/about">About</a>
+    <a href="/articles">Research Articles</a>
+    <a href="/books">Books</a>
+
+</nav>
+
+
+<div class="container">
+    <div class="cards">
+
+        <div class="card">
+            <h3>📖 Islamic Books</h3>
+            <p>Browse authentic books on Aqeedah, Hadith, Fiqh, History.</p>
+            <a href="/books">View Books</a>
+        </div>
+
+        <div class="card">
+            <h3>📝 Research Articles</h3>
+            <p>Scholarly articles addressing Islamic issues.</p>
+            <a href="/articles">Read Articles</a>
+        </div>
+
+        <div class="card">
+            <h3>ℹ About This Platform</h3>
+            <p>Know the vision and researcher behind this platform.</p>
+            <a href="/about">About Me</a>
+        </div>
+
+     
+</div>
+
+<footer>
+    © 2025 Islamic Research Library • Serving Knowledge for the Ummah
+</footer>
+
+</body>
+</html>

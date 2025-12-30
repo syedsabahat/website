@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Research Articles</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6f9;
+            padding: 40px;
+        }
+        h1 {
+            color: #0a3d62;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        li {
+            background: white;
+            margin-bottom: 12px;
+            padding: 15px;
+            border-radius: 6px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+        }
+        a {
+            text-decoration: none;
+            font-weight: bold;
+            color: #0b5ed7;
+        }
+    </style>
+</head>
+<body>
+
+<h1>📑 Research Articles</h1>
+
+{% if articles %}
+<ul>
+    {% for article in articles %}
+    <li>
+        <a href="/articles/{{ article }}">{{ article.replace("_"," ").replace(".txt","") }}</a>
+    </li>
+    {% endfor %}
+</ul>
+{% else %}
+<p>No articles available.</p>
+{% endif %}
+
+</body>
+</html>

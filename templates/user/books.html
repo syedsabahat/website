@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Islamic Books Library</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: "Segoe UI", Arial, sans-serif;
+            background: #f4f6f9;
+            color: #333;
+        }
+
+        /* HEADER */
+        .header {
+            background: linear-gradient(135deg, #0b5ed7, #0a3d62);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 36px;
+        }
+
+        .header p {
+            margin-top: 10px;
+            opacity: 0.9;
+        }
+
+        /* CONTAINER */
+        .container {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        /* BOOK GRID */
+        .book-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 25px;
+        }
+
+        /* BOOK CARD */
+        .book-card {
+            background: white;
+            border-radius: 14px;
+            padding: 25px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .book-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+        }
+
+        .book-icon {
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+
+        .book-title {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            word-break: break-word;
+        }
+
+        .book-card a {
+            display: inline-block;
+            text-decoration: none;
+            background: #0b5ed7;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 6px;
+            font-size: 14px;
+            transition: background 0.3s ease;
+        }
+
+        .book-card a:hover {
+            background: #084298;
+        }
+
+        /* EMPTY STATE */
+        .empty {
+            text-align: center;
+            font-size: 18px;
+            color: #777;
+            margin-top: 60px;
+        }
+
+        /* FOOTER */
+        footer {
+            margin-top: 80px;
+            background: #0a3d62;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="header">
+    <h1>📚 Islamic Books Library</h1>
+    <p>Authentic Islamic books for students & researchers</p>
+</div>
+
+<div class="container">
+
+    {% if books %}
+        <div class="book-grid">
+            {% for book in books %}
+                <div class="book-card">
+                    <div class="book-icon">📘</div>
+                    <div class="book-title">{{ book }}</div>
+
+                    <a href="{{ url_for('static', filename='books/' + book) }}" target="_blank">
+                        View / Download
+                    </a>
+                </div>
+            {% endfor %}
+        </div>
+    {% else %}
+        <div class="empty">
+            No books available at the moment 📭
+        </div>
+    {% endif %}
+
+</div>
+
+<footer>
+    © 2025 Islamic Research Library • Serving Knowledge for the Ummah
+</footer>
+
+</body>
+</html>

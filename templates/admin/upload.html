@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+
+<header>
+    <h1>🔐 Admin Panel</h1>
+    <p>Upload Islamic PDF Books</p>
+</header>
+
+<nav>
+    <a href="/">Home</a>
+    <a href="/books">Books</a>
+</nav>
+
+<div class="container">
+    <div class="card">
+        <form method="POST" enctype="multipart/form-data">
+            <input type="file" name="pdf" required>
+            <br><br>
+            <button class="btn" type="submit">Upload PDF</button>
+        </form>
+    </div>
+</div>
+<div style="padding:15px; background:#f5f5f5;">
+    <a href="/user">← Go to Website</a> |
+    <a href="/">Back to Panel</a> |
+    <a href="/logout">Logout</a>
+</div>
+
+<footer>
+    © 2025 Islamic Research Library
+</footer>
+
+</body>
+</html>
